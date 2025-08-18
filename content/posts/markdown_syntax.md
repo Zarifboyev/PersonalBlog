@@ -8,7 +8,7 @@ kategoriya: ["mavzular", "sintaks"]
 series: ["Mavzu yo'riqnomalari"]
 aliases: ["jekyll-dan0-migratsiya-qilish"]
 cover:
-  image: img/clean_keyboard.jpg
+  image: images/clean_keyboard.jpg
   caption: "Google dan yuklab olindi"
 ShowToc: true
 TocOpen: true

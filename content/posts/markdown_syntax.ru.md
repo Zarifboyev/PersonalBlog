@@ -8,7 +8,7 @@ description: "Примерная статья, демонстрирующая б
 серии: ["Руководства по темам"]
 aliases: ["миграция-с-jekyll"]
 cover:
-  image: img/clean_keyboard.jpg
+  image: images/clean_keyboard.jpg
   caption: "Загружено из Google"
 ShowToc: true
 TocOpen: true
