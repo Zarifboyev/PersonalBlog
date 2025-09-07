@@ -1,32 +1,124 @@
+# This is the configuration file for Decap CMS.
+# It should be placed in your site's `static/admin/` folder.
 backend:
   name: git-gateway
   branch: main
-  squash_merges: true # Branch to update (optional; defaults to master)
-media_folder: static/images/uploads
-public_folder: /images
+  squash_merges: true
+
+# The `media_folder` is the path where uploaded media will be saved, relative to the repository root.
+# The `public_folder` is the path that will be used in the final front matter for the image URL.
+media_folder: "static/images/uploads"
+public_folder: "/images"
+
+# Enables editorial workflow, which allows for drafts and reviews before publishing.
 publish_mode: editorial_workflow
 
+# Configures an external media library.
 media_library:
   name: uploadcare
   config:
     publicKey: 28d536105b790be0d234
 
+# Defines a custom slug format.
 slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "_"
 
+# This section defines the content collections for your site.
 collections:
+  # Single blog posts collection for both languages
   - name: "blog"
     label: "Blog"
     folder: "content/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allows users to create new posts
+    slug: "{{slug}}.{{lang}}" # Filename format: my-post-title.en.md
 
     editor:
-      preview: false
+      preview: false # Disables the live preview pane for this collection.
+
+    # These are the fields that will appear in the editor for each post.
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Language",
+          name: "lang",
+          widget: "select",
+          options: ["ru", "uz"],
+          default: "ru",
+          required: true,
+          hint: "The language for this post.",
+        }
+      - {
+          label: "Translation Key",
+          name: "translationKey",
+          widget: "string",
+          required: false,
+          hint: "A unique identifier to group translations of the same post. Leave blank for the first translation.",
+        }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ssZ",
+          required: true,
+        }
+      - {
+          label: "Last Modified Date",
+          name: "lastmod",
+          widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ssZ",
+          required: false,
+          hint: "Optional: Last modified date, used for sorting.",
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+          hint: "A short summary for search engines and post previews.",
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          required: false,
+          allow_add: true,
+          hint: "Keywords to categorize the post.",
+        }
+      - {
+          label: "Categories",
+          name: "categories",
+          widget: "list",
+          required: false,
+          allow_add: true,
+          hint: "Categories for the post.",
+        }
+      - {
+          label: "Cover Image",
+          name: "cover",
+          widget: "object",
+          required: false,
+          fields:
+            [
+              {
+                label: "Image",
+                name: "image",
+                widget: "image",
+                required: false,
+              },
+              {
+                label: "Caption",
+                name: "caption",
+                widget: "string",
+                required: false,
+              },
+              {
+                label: "Alt Text",
+                name: "alt",
+                widget: "string",
+                required: false,
+              },
+            ],
+        }
       - { label: "Body", name: "body", widget: "markdown" }
