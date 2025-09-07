@@ -1,5 +1,23 @@
 # This is the configuration file for Decap CMS.
 # It should be placed in your site's `static/admin/` folder.
+#
+#
+# Set localization for CMS dashboard only:
+locale: "ru"
+# Set localization i18n
+
+i18n:
+  # Required and can be one of multiple_folders, multiple_files or single_file
+  # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
+  structure:
+    multiple_folders
+    # Required - a list of locales to show in the editor UI
+  locales:
+    ["ru", "uz"]
+    # Optional, defaults to the first item in locales.
+    # The locale to be used for fields validation and as a baseline for the entry.
+  default_locale: "ru"
+
 backend:
   name: git-gateway
   branch: main
@@ -13,11 +31,19 @@ public_folder: "/images"
 # Enables editorial workflow, which allows for drafts and reviews before publishing.
 publish_mode: editorial_workflow
 
+# Easy to access url to return main site
+display_url: https://zarifboyev.space
+# Custom logo for dashboard
+logo_url: https://zarifboyev.space/images/logo.svg
+# Keep search disabled in dashboard to optimize workflow
+search: false
+
 # Configures an external media library.
 media_library:
   name: uploadcare
   config:
     publicKey: 28d536105b790be0d234
+    max_file_size: 10000000 # 10 megabytes
 
 # Defines a custom slug format.
 slug:
@@ -25,100 +51,119 @@ slug:
   clean_accents: true
   sanitize_replacement: "_"
 
-# This section defines the content collections for your site.
+  # These are the fields that will appear in the editor for each post.
+  # This section defines the content collections for your site.
 collections:
-  # Single blog posts collection for both languages
-  - name: "blog"
-    label: "Blog"
-    folder: "content/posts"
-    create: true # Allows users to create new posts
-    slug: "{{slug}}.{{lang}}" # Filename format: my-post-title.en.md
-
+  - name: "posts"
+    label: "Блог Посты" # Blog Posts
+    folder: "content/{{locale}}/posts"
+    i18n: true # This enables the multilingual UI for this collection
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
     editor:
-      preview: false # Disables the live preview pane for this collection.
+      preview: true # Enables the live preview pane for this collection.
 
-    # These are the fields that will appear in the editor for each post.
     fields:
-      - {
-          label: "Language",
-          name: "lang",
-          widget: "select",
-          options: ["ru", "uz"],
-          default: "ru",
-          required: true,
-          hint: "The language for this post.",
-        }
-      - {
-          label: "Translation Key",
-          name: "translationKey",
-          widget: "string",
-          required: false,
-          hint: "A unique identifier to group translations of the same post. Leave blank for the first translation.",
-        }
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
-          format: "YYYY-MM-DDTHH:mm:ssZ",
-          required: true,
-        }
-      - {
-          label: "Last Modified Date",
-          name: "lastmod",
-          widget: "datetime",
-          format: "YYYY-MM-DDTHH:mm:ssZ",
-          required: false,
-          hint: "Optional: Last modified date, used for sorting.",
-        }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "string",
-          required: false,
-          hint: "A short summary for search engines and post previews.",
-        }
-      - {
-          label: "Tags",
-          name: "tags",
-          widget: "list",
-          required: false,
-          allow_add: true,
-          hint: "Keywords to categorize the post.",
-        }
-      - {
-          label: "Categories",
-          name: "categories",
-          widget: "list",
-          required: false,
-          allow_add: true,
-          hint: "Categories for the post.",
-        }
-      - {
-          label: "Cover Image",
-          name: "cover",
-          widget: "object",
-          required: false,
-          fields:
-            [
-              {
-                label: "Image",
-                name: "image",
-                widget: "image",
-                required: false,
-              },
-              {
-                label: "Caption",
-                name: "caption",
-                widget: "string",
-                required: false,
-              },
-              {
-                label: "Alt Text",
-                name: "alt",
-                widget: "string",
-                required: false,
-              },
-            ],
-        }
-      - { label: "Body", name: "body", widget: "markdown" }
+      # These fields will be translated per language
+      - label: "Заголовок"
+        name: "title"
+        widget: "string"
+        i18n: true
+      - label: "Описание"
+        name: "description"
+        widget: "string"
+        i18n: true
+      - label: "Автор"
+        name: "author"
+        widget: "string"
+        i18n: true
+      - label: "Ключевые слова"
+        name: "keywords"
+        widget: "list"
+        i18n: true
+        field:
+          label: "Ключевое слово"
+          name: "keyword"
+          widget: "string"
+      - label: "Тело статьи"
+        name: "body"
+        widget: "markdown"
+        i18n: true
+        # These fields are page-specific settings that should be duplicated across languages
+      - label: "Дата публикации"
+        name: "date"
+        widget: "datetime"
+        i18n: duplicate
+      - label: "Изображение"
+        name: "thumbnail"
+        widget: "image"
+        choose_url: true
+        media_library:
+          config:
+            multiple: true
+        i18n: duplicate
+      - label: "Тэги"
+        name: "tags"
+        widget: "list"
+        i18n: duplicate
+        field:
+          label: "Тэг"
+          name: "tag"
+          widget: "string"
+      - label: "Категории"
+        name: "categories"
+        widget: "list"
+        i18n: duplicate
+        field:
+          label: "Категория"
+          name: "category"
+          widget: "string"
+      - label: "Черновик?"
+        name: "draft"
+        widget: "boolean"
+        default: false
+        i18n: duplicate
+        # Optional PaperMod-specific boolean fields that can be toggled per post
+      - label: "Показать время чтения"
+        name: "ShowReadingTime"
+        widget: "boolean"
+        default: true
+        i18n: duplicate
+      - label: "Показать кнопки шеринга"
+        name: "ShowShareButtons"
+        widget: "boolean"
+        default: true
+        i18n: duplicate
+      - label: "Скрыть оглавление"
+        name: "hideToc"
+        widget: "boolean"
+        default: false
+        i18n: duplicate
+      - label: "Скрыть мета"
+        name: "hideMeta"
+        widget: "boolean"
+        default: false
+        i18n: duplicate
+  # # You can add other collections here, e.g., for single pages like "About Us"
+  # - name: "pages"
+  #   label: "Страницы"
+  #   folder: "content/{{locale}}/pages"
+  #   i18n: true
+  #   create: true
+  #   editor:
+  #     preview: false
+  #   fields:
+  #     - { label: "Заголовок", name: "title", widget: "string", i18n: true }
+  #     - {
+  #         label: "Тело страницы",
+  #         name: "body",
+  #         widget: "markdown",
+  #         i18n: true,
+  #       }
+  #     - {
+  #         label: "Черновик?",
+  #         name: "draft",
+  #         widget: "boolean",
+  #         default: false,
+  #         i18n: "duplicate",
+  #       }

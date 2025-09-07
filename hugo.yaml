@@ -1,6 +1,6 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://shaxsiyblogim.netlify.app/"
+baseURL: "https://zarifboyev.space/"
 
 # copyright: "© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
 theme: [PaperMod]
@@ -34,6 +34,7 @@ languages:
     weight: 1
     disabled: false
     languageCode: uz
+    contentDir: content/uz
     languageDirection: "ltr"
     taxonomies:
       category: kategoriya
@@ -76,6 +77,7 @@ languages:
     languageName: "По-русски :ru:"
     weight: 2
     title: Просто блог
+    contentDir: content/ru
     taxonomies:
       category: категории
       tag: теги
