@@ -1,7 +1,5 @@
 # This is the configuration file for Decap CMS.
 # It should be placed in your site's `static/admin/` folder.
-#
-#
 # Set localization for CMS dashboard only:
 locale: "ru"
 # Set localization i18n
@@ -64,86 +62,19 @@ collections:
       preview: true # Enables the live preview pane for this collection.
 
     fields:
-      # These fields will be translated per language
-      - label: "Заголовок"
-        name: "title"
-        widget: "string"
+      - label: Заголовок
+        name: title
+        widget: string
         i18n: true
-      - label: "Описание"
-        name: "description"
-        widget: "string"
+      - label: Описание
+        name: description
+        widget: string
         i18n: true
-      - label: "Автор"
-        name: "author"
-        widget: "string"
-        i18n: true
-      - label: "Ключевые слова"
-        name: "keywords"
-        widget: "list"
-        i18n: true
-        field:
-          label: "Ключевое слово"
-          name: "keyword"
-          widget: "string"
-      - label: "Тело статьи"
-        name: "body"
-        widget: "markdown"
-        i18n: true
-        # These fields are page-specific settings that should be duplicated across languages
-      - label: "Дата публикации"
-        name: "date"
-        widget: "datetime"
+      - label: Дата
+        name: date
+        widget: datetime
         i18n: duplicate
-      - label: "Изображение"
-        name: "thumbnail"
-        widget: "image"
-        choose_url: true
-        media_library:
-          config:
-            multiple: true
-        i18n: duplicate
-      - label: "Тэги"
-        name: "tags"
-        widget: "list"
-        i18n: duplicate
-        field:
-          label: "Тэг"
-          name: "tag"
-          widget: "string"
-      - label: "Категории"
-        name: "categories"
-        widget: "list"
-        i18n: duplicate
-        field:
-          label: "Категория"
-          name: "category"
-          widget: "string"
-      - label: "Черновик?"
-        name: "draft"
-        widget: "boolean"
-        default: false
-        i18n: duplicate
-        # Optional PaperMod-specific boolean fields that can be toggled per post
-      - label: "Показать время чтения"
-        name: "ShowReadingTime"
-        widget: "boolean"
-        default: true
-        i18n: duplicate
-      - label: "Показать кнопки шеринга"
-        name: "ShowShareButtons"
-        widget: "boolean"
-        default: true
-        i18n: duplicate
-      - label: "Скрыть оглавление"
-        name: "hideToc"
-        widget: "boolean"
-        default: false
-        i18n: duplicate
-      - label: "Скрыть мета"
-        name: "hideMeta"
-        widget: "boolean"
-        default: false
-        i18n: duplicate
+
   # # You can add other collections here, e.g., for single pages like "About Us"
   # - name: "pages"
   #   label: "Страницы"
