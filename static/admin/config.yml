@@ -53,8 +53,8 @@ slug:
   # This section defines the content collections for your site.
 collections:
   - name: "posts"
-    label: "Блог Посты" # Blog Posts
-    folder: "content/{{locale}}/posts"
+    label: "блог" # Blog Posts
+    folder: "content/"
     i18n: true # This enables the multilingual UI for this collection
     create: true
     slug: "{{year}}-{{month}}-{{slug}}"
