@@ -12,6 +12,8 @@ cover:
   caption: "Загружено из Google"
 ShowToc: true
 TocOpen: true
+slug: "markdown-syntax"
+translationKey: "markdown-syntax"
 ---
 
 

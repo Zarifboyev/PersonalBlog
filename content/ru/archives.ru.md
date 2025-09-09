@@ -1,6 +1,6 @@
 ---
 title: "Архив"
 layout: "archives"
-url: "/ru/archives"
+url: "archives"
 summary: "archives"
 ---

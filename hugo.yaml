@@ -1,9 +1,14 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+ignoreFiles:
+  - '\\.git/'
+  - '\\.git/hooks/'
+  - '\\.git/hooks/.*'
+
 baseURL: "https://zarifboyev.space/"
 
 # copyright: "© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
-theme: [PaperMod]
+theme: "PaperMod"
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -15,26 +20,30 @@ pygmentsUseClasses: true
 # mainsections: ["posts", "papermod"]
 
 minify:
-  disableXML: true
+  disableXML: false # If you want Google to index properly, don’t disable it.
   # minifyOutput: true
 
 pagination:
   disableAliases: false
   pagerSize: 5
 
+# If you disable defaultContentLanguageInSubdir: false,
+# Hugo will serve Uzbek at /,
+# and Russian at /ru/.
+# Make sure that’s what you want.
 defaultContentLanguage: uz
-defaultContentLanguageInSubdir: false
+defaultContentLanguageInSubdir: true
 disableDefaultLanguageRedirect: false
 disableLanguages: []
 
 languages:
   uz:
-    title: Shunchaki blog
+    title: Super Blog
     languageName: "O'zbek tilida 🇺🇿"
     weight: 1
     disabled: false
-    languageCode: uz
-    contentDir: content/uz
+    languageCode: uz-UZ
+    contentDir: content/uz/
     languageDirection: "ltr"
     taxonomies:
       category: kategoriya
@@ -44,29 +53,25 @@ languages:
       main:
         - name: Arxiv
           url: archives/
-          pageRef: /archives
           weight: 5
         - name: Kategoriyalar
           url: kategoriya/
-          pageRef: /kategoriya
           weight: 10
         - name: Teglar
           url: tags/
-          pageRef: /tags
           weight: 10
-        - name: Qidiruv 🔍
+        - name: Qidiruv
           url: search/
-          pageRef: /search
           weight: 15
     params:
       profileMode:
         enabled: true
-        title: Samandar Akbarov
-        imageUrl: "https://images.squarespace-cdn.com/content/v1/604cfdc39aaba3370efa9ec0/1616004266730-MNW7C5O07P3TE7T8647F/TYLER-GARRETSON_58-SQUARE.jpg"
+        title: Aziza Akbarova
+        imageUrl: "/images/profile.png"
         imageTitle: Men ishxonamda
         # imageWidth: 120
         # imageHeight: 120
-        subtitle: "🚀 Sun’iy intellekt va raqamli yetakchilik | Biznes va raqamli o‘zgarishlar | Innovatsiya | Strategiya | Avanade (Accenture va Microsoft qo‘shma korxonasi)da boshqaruv direktori | SMUda sun’iy intellekt professori | Maslahat kengashi a’zosi"
+        subtitle: "Raqamli transformatsiya va sun'iy intellekt bo'yicha mutaxassis"
         buttons:
           - name: Blog
             url: posts
@@ -74,10 +79,10 @@ languages:
             url: https://www.linkedin.com/in/joellindsey/
 
   ru:
-    languageName: "По-русски :ru:"
+    languageName: "По-русски 🇷🇺"
     weight: 2
-    title: Просто блог
-    contentDir: content/ru
+    title: Супер Блог
+    contentDir: content/ru/
     taxonomies:
       category: категории
       tag: теги
@@ -86,22 +91,16 @@ languages:
       main:
         - name: Архив
           url: archives/
-          pageRef: /archives
           weight: 5
         - name: Теги
           url: теги/
-          pageRef: /теги
           weight: 10
         - name: Категории
           url: категории/
-          pageRef: /категории
           weight: 10
-        # - name: RuSeriyalar
-        #   url: ruseries
-        #   weight: 10
-        - name: Поиск 🔍
+
+        - name: Поиск
           url: search/
-          pageRef: /search
           weight: 15
 
         # - name: NullLink
@@ -109,15 +108,14 @@ languages:
 
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
-      # languageAltTitle: "RU +"
       profileMode:
         enabled: true
-        title: Самандар Акбаров
-        imageUrl: "https://images.squarespace-cdn.com/content/v1/604cfdc39aaba3370efa9ec0/1616004266730-MNW7C5O07P3TE7T8647F/TYLER-GARRETSON_58-SQUARE.jpg"
+        title: Азиза Акбарова
+        imageUrl: "/images/profile.png"
         imageTitle: Я на работе
         # imageWidth: 120
         # imageHeight: 120
-        subtitle: "🔹 Искусственный интеллект и цифровое лидерство | Бизнес и цифровые преобразования | Инновации | Стратегия | Управляющий директор Avanade (совместное предприятие Accenture и Microsoft) | Профессор искусственного интеллекта в SMU | Член Консультативного совета"
+        subtitle: "Специалист по цифровой трансформации и ИИ"
         buttons:
           - name: Блог
             url: posts
@@ -257,7 +255,3 @@ services:
     disableInlineCSS: true
   x:
     disableInlineCSS: true
-  ignoreFiles:
-    - '\\.git/'
-    - '\\.git/hooks/'
-    - '\\.git/hooks/.*'

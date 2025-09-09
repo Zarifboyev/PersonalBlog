@@ -12,6 +12,8 @@ cover:
   caption: "Google dan yuklab olindi"
 ShowToc: true
 TocOpen: true
+slug: "markdown-syntax"
+translationKey: "markdown-syntax"
 ---
 
 Ushbu maqola Hugo kontent fayllarida ishlatilishi mumkin bo'lgan asosiy Markdown sintaksisining namunalarini taqdim etadi, shuningdek, Hugo mavzusida asosiy HTML elementlarining CSS bilan bezatilganligini ko'rsatadi.

@@ -1,5 +1,6 @@
 ---
 title: "Qidiruv"
-placeholder: Search demo site with full text fuzzy search ...
+placeholder: Qaysi ma'lumotni qidiramiz?
 layout: "search"
+url: search
 ---

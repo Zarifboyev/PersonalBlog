@@ -4,18 +4,6 @@
 locale: "ru"
 # Set localization i18n
 
-i18n:
-  # Required and can be one of multiple_folders, multiple_files or single_file
-  # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
-  structure:
-    multiple_folders
-    # Required - a list of locales to show in the editor UI
-  locales:
-    ["ru", "uz"]
-    # Optional, defaults to the first item in locales.
-    # The locale to be used for fields validation and as a baseline for the entry.
-  default_locale: "ru"
-
 backend:
   name: git-gateway
   branch: main
@@ -51,50 +39,44 @@ slug:
 
   # These are the fields that will appear in the editor for each post.
   # This section defines the content collections for your site.
+
+i18n:
+  # Required and can be one of multiple_folders, multiple_files or single_file
+  # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
+  structure:
+    multiple_folders
+    # Required - a list of locales to show in the editor UI
+  locales:
+    ["ru", "uz"]
+    # Optional, defaults to the first item in locales.
+    # The locale to be used for fields validation and as a baseline for the entry.
+  default_locale: "ru"
 collections:
-  - name: "posts"
-    label: "блог" # Blog Posts
-    folder: "content/"
-    i18n: true # This enables the multilingual UI for this collection
+  - label: "O'zbek tilida blog"
+    name: "uzbek_posts"
+    folder: "uz/posts"
     create: true
-    slug: "{{year}}-{{month}}-{{slug}}"
-    editor:
-      preview: true # Enables the live preview pane for this collection.
-
+    filter: { field: "language", value: "uz" }
     fields:
-      - label: Заголовок
-        name: title
-        widget: string
-        i18n: true
-      - label: Описание
-        name: description
-        widget: string
-        i18n: true
-      - label: Дата
-        name: date
-        widget: datetime
-        i18n: duplicate
-
-  # # You can add other collections here, e.g., for single pages like "About Us"
-  # - name: "pages"
-  #   label: "Страницы"
-  #   folder: "content/{{locale}}/pages"
-  #   i18n: true
-  #   create: true
-  #   editor:
-  #     preview: false
-  #   fields:
-  #     - { label: "Заголовок", name: "title", widget: "string", i18n: true }
-  #     - {
-  #         label: "Тело страницы",
-  #         name: "body",
-  #         widget: "markdown",
-  #         i18n: true,
-  #       }
-  #     - {
-  #         label: "Черновик?",
-  #         name: "draft",
-  #         widget: "boolean",
-  #         default: false,
-  #         i18n: "duplicate",
-  #       }
+      - {
+          label: "Til",
+          name: "language",
+          widget: "select",
+          options: ["en", "uz"],
+        }
+      - { label: "Sarlavha", name: "title", widget: "string" }
+      - { label: "Tarkib", name: "body", widget: "markdown" }
+  - label: "Блог на русском языке"
+    name: "russian_posts"
+    folder: "ru/posts"
+    create: true
+    filter: { field: "language", value: "ru" }
+    fields:
+      - {
+          label: "Язык",
+          name: "language",
+          widget: "select",
+          options: ["uz", "ru"],
+        }
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Содержание", name: "body", widget: "markdown" }
