@@ -54,7 +54,7 @@ i18n:
 collections:
   - label: "O'zbek tilida blog"
     name: "uzbek_posts"
-    folder: "uz/posts"
+    folder: "content/uz/posts"
     create: true
     filter: { field: "language", value: "uz" }
     fields:
@@ -62,13 +62,13 @@ collections:
           label: "Til",
           name: "language",
           widget: "select",
-          options: ["en", "uz"],
+          options: ["ru", "uz"],
         }
       - { label: "Sarlavha", name: "title", widget: "string" }
       - { label: "Tarkib", name: "body", widget: "markdown" }
   - label: "Блог на русском языке"
     name: "russian_posts"
-    folder: "ru/posts"
+    folder: "content/ru/posts"
     create: true
     filter: { field: "language", value: "ru" }
     fields:
@@ -76,7 +76,7 @@ collections:
           label: "Язык",
           name: "language",
           widget: "select",
-          options: ["uz", "ru"],
+          options: ["ru", "uz"],
         }
       - { label: "Заголовок", name: "title", widget: "string" }
       - { label: "Содержание", name: "body", widget: "markdown" }
