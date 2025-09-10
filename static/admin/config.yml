@@ -52,12 +52,13 @@ i18n:
     # The locale to be used for fields validation and as a baseline for the entry.
   default_locale: "ru"
 collections:
-  - label: "O'zbek tilida blog"
+  - label: "O'zbek tilida"
     name: "uzbek_posts"
     folder: "content/uz/posts"
     slug: "{{year}}/{{month}}/{{slug}}"
     # slug: "{{fields.category}}/{{slug}}"
     create: true
+    summary: "{{title | upper}} - {{date | date('YYYY-MM-DD')}} – {{body | truncate(20, '***')}}"
     filter: { field: "language", value: "uz" }
     fields:
       - {
@@ -65,13 +66,52 @@ collections:
           name: "language",
           widget: "select",
           options: ["ru", "uz"],
+          default: "uz",
         }
       - { label: "Sarlavha", name: "title", widget: "string" }
-      - { label: "Tarkib", name: "body", widget: "markdown" }
+      - {
+          label: "Tavsif",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Sana", name: "date", widget: "datetime" }
+      - { label: "Qoralama", name: "draft", widget: "boolean", default: true }
+      - { label: "Teglar", name: "tags", widget: "list", required: false }
+      - {
+          label: "Kategoriyalar",
+          name: "kategoriya",
+          widget: "list",
+          required: false,
+        }
+
+      - { label: "Muallif", name: "author", widget: "string", required: false }
+      - {
+          label: "Asosiy rasm",
+          name: "cover",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Tarkib jadvalini ko‘rsatish",
+          name: "ShowToc",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Jadvalni ochiq saqlash",
+          name: "TocOpen",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - { label: "Maqola matni", name: "body", widget: "markdown" }
   - label: "Блог на русском языке"
     name: "russian_posts"
     folder: "content/ru/posts"
     create: true
+    summary: "{{title | upper}} - {{date | date('YYYY-MM-DD')}} – {{body | truncate(20, '***')}}"
     filter: { field: "language", value: "ru" }
     fields:
       - {
@@ -79,6 +119,40 @@ collections:
           name: "language",
           widget: "select",
           options: ["ru", "uz"],
+          default: "ru",
         }
       - { label: "Заголовок", name: "title", widget: "string" }
-      - { label: "Содержание", name: "body", widget: "markdown" }
+      - {
+          label: "Описание",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Черновик", name: "draft", widget: "boolean", default: true }
+      - { label: "Теги", name: "tags", widget: "list", required: false }
+      - {
+          label: "Категории",
+          name: "категории",
+          widget: "list",
+          required: false,
+        }
+      - { label: "Теги", name: "теги", widget: "list", required: false }
+
+      - { label: "Автор", name: "author", widget: "string", required: false }
+      - { label: "Обложка", name: "cover", widget: "image", required: false }
+      - {
+          label: "Показать оглавление",
+          name: "ShowToc",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Оглавление открыто",
+          name: "TocOpen",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - { label: "Содержимое", name: "body", widget: "markdown" }

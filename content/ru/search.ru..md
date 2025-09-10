@@ -1,6 +1,7 @@
 ---
 title: "Поиск"
+placeholder: Какую информацию мы будем искать?
 layout: "search"
-url: "/ru/search"
-placeholder: Поиск по сайту с полнотекстовым поиском ...
+summary: "Эта страница используется для поиска."
+url: search
 ---

@@ -1,54 +1,72 @@
-# If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
-# contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-ignoreFiles:
-  - '\\.git/'
-  - '\\.git/hooks/'
-  - '\\.git/hooks/.*'
-
+# ---------------------------
+# General Site Configuration
+# ---------------------------
 baseURL: "https://zarifboyev.space/"
-
-# copyright: "© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
 theme: "PaperMod"
-
-enableInlineShortcodes: true
-enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
-enableEmoji: true
-pygmentsUseClasses: true
-# mainsections: ["posts", "papermod"]
-
-minify:
-  disableXML: false # If you want Google to index properly, don’t disable it.
-  # minifyOutput: true
-
-pagination:
-  disableAliases: false
-  pagerSize: 5
-
-# If you disable defaultContentLanguageInSubdir: false,
-# Hugo will serve Uzbek at /,
-# and Russian at /ru/.
-# Make sure that’s what you want.
+languageCode: "uz-UZ"
 defaultContentLanguage: uz
 defaultContentLanguageInSubdir: true
 disableDefaultLanguageRedirect: false
 disableLanguages: []
 
+title: "Super Blog"
+# description: "Shaxsiy blog. @Zarifboyev tomonidan yaratilgan. O'z ijodingizni kashf eting"
+
+# ---------------------------
+# Build & Output Settings
+# ---------------------------
+enableInlineShortcodes: true
+enableRobotsTXT: true
+enableEmoji: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+pygmentsUseClasses: true
+canonifyURLs: true
+
+ignoreFiles:
+  - "\\.git/"
+  - "\\.git/hooks/"
+  - "\\.git/hooks/.*"
+  - "public/"
+
+minify:
+  disableXML: false # Keep XML enabled so Google can index properly
+  minifyOutput: true
+
+pagination:
+  disableAliases: false
+  pagerSize: 5
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+sitemap:
+  changefreq: "monthly"
+  priority: 0.5
+  filename: "sitemap.xml"
+
+# ---------------------------
+# Multilingual Configuration
+# ---------------------------
 languages:
   uz:
     title: Super Blog
     languageName: "O'zbek tilida 🇺🇿"
+    languageCode: uz-UZ
+    languageDirection: "ltr"
     weight: 1
     disabled: false
-    languageCode: uz-UZ
     contentDir: content/uz/
-    languageDirection: "ltr"
+
     taxonomies:
       category: kategoriya
       tag: tags
       series: series
+
     menu:
       main:
         - name: Arxiv
@@ -63,29 +81,35 @@ languages:
         - name: Qidiruv
           url: search/
           weight: 15
+
     params:
+      editPost:
+        URL: "mailto://zarifboyev@duck.com?subject=Bizga xabar bering"
+        Text: "Xatolik topdingizmi? Bizga xabar bering" # edit text
+        appendFilePath: true # to append file path to Edit link
       profileMode:
         enabled: true
-        title: Aziza Akbarova
-        imageUrl: "/images/profile.png"
-        imageTitle: Men ishxonamda
-        # imageWidth: 120
-        # imageHeight: 120
+        title: "Aziza Akbarova"
+        imageUrl: "/images/profile.jpg"
+        # imageTitle: "Men ishxonamda"
         subtitle: "Raqamli transformatsiya va sun'iy intellekt bo'yicha mutaxassis"
         buttons:
-          - name: Blog
-            url: posts
+          - name: Arxiv
+            url: archives/
           - name: LinkedIn
             url: https://www.linkedin.com/
+
   ru:
+    title: Супер Блог
     languageName: "По-русски 🇷🇺"
     weight: 2
-    title: Супер Блог
     contentDir: content/ru/
+
     taxonomies:
       category: категории
       tag: теги
       series: серии
+
     menu:
       main:
         - name: Архив
@@ -96,120 +120,67 @@ languages:
           weight: 10
         - name: Категории
           url: категории/
-          weight: 10
-
+          weight: 15
         - name: Поиск
           url: search/
-          weight: 15
+          weight: 20
 
-        # - name: NullLink
-        #   url: "#"
-
-    # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
+      editPost:
+        URL: "mailto://zarifboyev@duck.com?subject=Сообщите нам"
+        Text: "Нашли ошибку? Сообщите нам." # edit text
+        appendFilePath: true # to append file path to Edit link
       profileMode:
         enabled: true
-        title: Азиза Акбарова
-        imageUrl: "/images/profile.png"
-        imageTitle: Я на работе
-        # imageWidth: 120
-        # imageHeight: 120
+        title: "Азиза Акбарова"
+        imageUrl: "/images/profile.jpg"
+        # imageTitle: "Я на работе"
         subtitle: "Специалист по цифровой трансформации и ИИ"
+        #imageWidth: 120 # You can set custom image size depending on your needs
+        #imageHeight: 120 # You can set custom image size depending on your needs
         buttons:
-          - name: Блог
-            url: posts
+          - name: Архив
+            url: archives/
           - name: LinkedIn
             url: https://www.linkedin.com/
-
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON
-
+        # Depending on, you can add additional social media pages:
+        # socialIcons: # optional
+        #   - name: "<platform>"
+        #     url: "<link>"
+        #   - name: "<platform 2>"
+        #     url: "<link2>"
+# ---------------------------
+# Theme Parameters
+# ---------------------------
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: ""
-  author: Samandar
-  # author: ["Me", "You"] # multiple authors
+  env: production # Enables Google Analytics, OpenGraph, Twitter Cards, Schema
 
   defaultTheme: auto
-  # disableThemeToggle: true
-  ShowShareButtons: true
-  ShowReadingTime: true
-  # disableSpecial1stPost: true
   displayFullLangName: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  ShowRssButtonInSectionTermList: true
-  ShowAllPagesInArchive: true
-  ShowPageNums: true
+
   ShowToc: true
-  # comments: false
-  # images:
-  #   [
-  #     "https://images.unsplash.com/photo-1699891730676-037bed3c1bed?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2Vic2l0ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D",
-  #   ]
+  ShowPageNums: true
+  ShowBreadCrumbs: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true
+  ShowAllPagesInArchive: true
+  ShowPostNavLinks: true
+  ShowRssButtonInSectionTermList: true
 
-  # profileMode:
-  #   enabled: false
-  #   title: PaperMod
-  #   imageUrl: "#"
-  #   imageTitle: my image
-  #   # imageWidth: 120
-  #   # imageHeight: 120
-  #   buttons:
-  #     - name: Archives
-  #       url: archives
-  #     - name: Tags
-  #       url: tags
-
-  # homeInfoParams:
-  #   Title: "PaperMod's Demo"
-  #   Content: >
-  #     Salom bu kontent qismi homeinfoparamsda chiqyapti qaysi tilda?
-  # socialIcons:
-  #   - name: github
-  #     title: View Source on Github
-  #     url: "https://github.com/adityatelange/hugo-PaperMod"
-  #   - name: Discord
-  #     title: Join discord community
-  #     url: "https://discord.gg/ahpmTvhVmp"
-  #   - name: X
-  #     title: Share PaperMod on X/Twitter
-  #     url: "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
-  #   - name: KoFi
-  #     title: Buy me a Ko-Fi :)
-  #     url: "https://ko-fi.com/adityatelange"
-
-  # editPost:
-  #   URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
-  #   Text: "Suggest Changes" # edit text
-  #   appendFilePath: true # to append file path to Edit link
-
-  # label:
-  # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
-  # text: "Home"
-  # icon: icon.png
-  # iconHeight: 35
-
-  # analytics:
-  #     google:
-  #         SiteVerificationTag: "XYZabc"
+  analytics:
+    google:
+      SiteVerificationTag: "G-GYEHTYP7RG"
 
   assets:
     disableHLJS: true
-  #     favicon: "<link / abs url>"
-  #     favicon16x16: "<link / abs url>"
-  #     favicon32x32: "<link / abs url>"
-  #     apple_touch_icon: "<link / abs url>"
-  #     safari_pinned_tab: "<link / abs url>"
 
   cover:
     hidden: true # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
     hiddenInSingle: true # hide on single page
+    linkFullImages: true
+    responsiveImages: false
 
   fuseOpts:
     isCaseSensitive: false
@@ -218,37 +189,45 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
 
+# ---------------------------
+# Markup & Highlighting
+# ---------------------------
 markup:
   goldmark:
     renderer:
       unsafe: true
   highlight:
     noClasses: false
-    anchorLineNos: true
     codeFences: true
     guessSyntax: true
     lineNos: true
+    anchorLineNos: true
     style: monokai
 
+# ---------------------------
+# Privacy Settings
+# ---------------------------
 privacy:
   vimeo:
     disabled: false
     simple: true
-
-  twitter:
+  x:
     disabled: false
     enableDNT: true
     simple: true
-
   instagram:
     disabled: false
     simple: true
-
   youtube:
     disabled: false
     privacyEnhanced: true
+
+# ---------------------------
+# Services
+# ---------------------------
 services:
   instagram:
     disableInlineCSS: true
