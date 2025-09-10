@@ -52,12 +52,13 @@ i18n:
     # The locale to be used for fields validation and as a baseline for the entry.
   default_locale: "ru"
 collections:
-  - label: "O'zbek tilida blog"
+  - label: "O'zbek tilida"
     name: "uzbek_posts"
     folder: "content/uz/posts"
     slug: "{{year}}/{{month}}/{{slug}}"
     # slug: "{{fields.category}}/{{slug}}"
     create: true
+    summary: "{{title | upper}} - {{date | date('YYYY-MM-DD')}} – {{body | truncate(20, '***')}}"
     filter: { field: "language", value: "uz" }
     fields:
       - {
@@ -65,20 +66,282 @@ collections:
           name: "language",
           widget: "select",
           options: ["ru", "uz"],
+          default: "uz",
         }
       - { label: "Sarlavha", name: "title", widget: "string" }
-      - { label: "Tarkib", name: "body", widget: "markdown" }
+      - {
+          label: "Tavsif",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Sana", name: "date", widget: "datetime" }
+      - { label: "Qoralama", name: "draft", widget: "boolean", default: true }
+      - { label: "Teglar", name: "tags", widget: "list", required: false }
+      - {
+          label: "Kategoriyalar",
+          name: "kategoriya",
+          widget: "list",
+          required: false,
+        }
+
+      - { label: "Muallif", name: "author", widget: "string", required: false }
+      - {
+          label: "Asosiy rasm",
+          name: "cover",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Tarkib jadvalini ko‘rsatish",
+          name: "ShowToc",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Jadvalni ochiq saqlash",
+          name: "TocOpen",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - { label: "Maqola matni", name: "body", widget: "markdown" }
   - label: "Блог на русском языке"
     name: "russian_posts"
     folder: "content/ru/posts"
     create: true
+    summary: "{{title | upper}} - {{date | date('YYYY-MM-DD')}} – {{body | truncate(20, '***')}}"
     filter: { field: "language", value: "ru" }
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
       - {
-          label: "Язык",
-          name: "language",
-          widget: "select",
-          options: ["ru", "uz"],
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
         }
-      - { label: "Заголовок", name: "title", widget: "string" }
-      - { label: "Содержание", name: "body", widget: "markdown" }
+      - { label: "Author", name: "author", widget: "list", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - {
+          label: "Categories",
+          name: "categories",
+          widget: "list",
+          required: false,
+        }
+      - {
+          label: "Weight (Page Order)",
+          name: "weight",
+          widget: "number",
+          required: false,
+        }
+
+      # Cover Image Fields
+      - label: "Cover"
+        name: "cover"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - {
+              label: "Caption",
+              name: "caption",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Alt Text",
+              name: "alt",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Relative Path",
+              name: "relative",
+              widget: "boolean",
+              default: false,
+              required: false,
+            }
+          - {
+              label: "Responsive Images",
+              name: "responsiveImages",
+              widget: "boolean",
+              default: false,
+              required: false,
+            }
+          - {
+              label: "Hide on Page",
+              name: "hidden",
+              widget: "boolean",
+              default: false,
+              required: false,
+            }
+
+      # SEO & Metadata
+      - {
+          label: "Robots NoIndex",
+          name: "robotsNoIndex",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Prevents search engines from indexing this page.",
+        }
+      - {
+          label: "Hide Meta",
+          name: "hidemeta",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Hides date, read-time, and author.",
+        }
+      - {
+          label: "Hide Summary",
+          name: "hideSummary",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Hides summary on list pages.",
+        }
+      - {
+          label: "Hide Footer",
+          name: "hideFooter",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Hides the footer text.",
+        }
+      - {
+          label: "Search Hidden",
+          name: "searchHidden",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Hides page from site search.",
+        }
+      - {
+          label: "Canonical URL",
+          name: "canonicalURL",
+          widget: "string",
+          required: false,
+          hint: "Adds a canonical URL to the page.",
+        }
+      - {
+          label: "Show Canonical Link",
+          name: "ShowCanonicalLink",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Displays the canonical URL's hostname.",
+        }
+      - {
+          label: "Canonical Link Text",
+          name: "CanonicalLinkText",
+          widget: "string",
+          required: false,
+          default: "Originally published at",
+          hint: "Text before the canonical URL's hostname.",
+        }
+
+      # UI & Content Display
+      - {
+          label: "Show Table of Contents",
+          name: "toc",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Keep ToC Open",
+          name: "tocopen",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Use Hugo's TOC",
+          name: "UseHugoToc",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Uses Hugo's default TOC instead of custom one.",
+        }
+      - {
+          label: "Disable Anchored Headings",
+          name: "disableAnchoredHeadings",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Show Reading Time",
+          name: "ShowReadingTime",
+          widget: "boolean",
+          default: true,
+          required: false,
+        }
+      - {
+          label: "Show Word Count",
+          name: "ShowWordCount",
+          widget: "boolean",
+          default: true,
+          required: false,
+        }
+      - {
+          label: "Show BreadCrumbs",
+          name: "ShowBreadCrumbs",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Show Post Nav Links",
+          name: "ShowPostNavLinks",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Show RSS Button",
+          name: "ShowRssButtonInSectionTermList",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Shows RSS icon in Section, Term, and List pages.",
+        }
+      - {
+          label: "Show Code Copy Buttons",
+          name: "ShowCodeCopyButtons",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Comments",
+          name: "comments",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Shows/hides comments.",
+        }
+
+      # Sharing
+      - {
+          label: "Disable Share",
+          name: "disableShare",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Hides share icons.",
+        }
+      - {
+          label: "Share Buttons",
+          name: "ShareButtons",
+          widget: "list",
+          required: false,
+          hint: "Customize which share buttons to enable.",
+        }
+
+      - { label: "Content", name: "body", widget: "markdown" }
