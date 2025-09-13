@@ -76,7 +76,7 @@ languages:
           url: kategoriya/
           weight: 10
         - name: Teglar
-          url: tags/
+          url: teglar/
           weight: 10
         - name: Qidiruv
           url: search/
@@ -98,7 +98,7 @@ languages:
           - name: Blog
             url: posts/
           - name: Teglar
-            url: tags/
+            url: teglar/
           # - name: LinkedIn
           #   url: https://www.linkedin.com/
 

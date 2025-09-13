@@ -2,7 +2,6 @@
 # It should be placed in your site's `static/admin/` folder.
 # Set localization for CMS dashboard only:
 locale: "ru"
-# Set localization i18n
 
 backend:
   name: git-gateway
@@ -27,18 +26,8 @@ media_library:
     max_file_size: 10000000 # 10 megabytes
 # The `media_folder` is the path where uploaded media will be saved, relative to the repository root.
 # The `public_folder` is the path that will be used in the final front matter for the image URL.
-# media_folder: "static/images/uploads"
-# public_folder: "/images"
-
-# Defines a custom slug format.
-slug:
-  encoding: "ascii"
-  clean_accents: true
-  sanitize_replacement: "_"
-
-  # These are the fields that will appear in the editor for each post.
-  # This section defines the content collections for your site.
-
+media_folder: "static/images/uploads"
+public_folder: "/images"
 i18n:
   # Required and can be one of multiple_folders, multiple_files or single_file
   # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
@@ -50,11 +39,22 @@ i18n:
     # Optional, defaults to the first item in locales.
     # The locale to be used for fields validation and as a baseline for the entry.
   default_locale: "ru"
+# Defines a custom slug format.
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
+  # These are the fields that will appear in the editor for each post.
+  # This section defines the content collections for your site.
+
 collections:
   - label: "O'zbek tilida"
     name: "uzbek_posts"
     folder: "content/uz/posts"
-    slug: "{{year}}/{{month}}/{{slug}}"
+    format: frontmatter
+    extension: mdx
+    slug: "{{year}}-{{month}}-{{slug}}"
     # slug: "{{fields.category}}/{{slug}}"
     create: true
     summary: "{{title | upper}} - {{date | date('YYYY-MM-DD')}} – {{body | truncate(20, '***')}}"
@@ -62,13 +62,7 @@ collections:
     fields:
       - { label: "Sarlavha", name: "title", widget: "string" }
       - { label: "Sana", name: "date", widget: "datetime" }
-      - {
-          label: "Qoralama",
-          name: "draft",
-          widget: "boolean",
-          default: true,
-          hint: "Tekshiruv paytida bu post saqlanadi, ammo ommaviy veb-saytda ko‘rinmaydi. Postni e’lon qilish uchun ushbu belgi qo‘yilgan katakchani olib tashlang.",
-        }
+
       - {
           label: "Tavsif",
           name: "description",
@@ -225,18 +219,12 @@ collections:
     create: true
     summary: "{{title | upper}} - {{date | date('YYYY-MM-DD')}} – {{body | truncate(20, '***')}}"
     # slug: "{{fields.category}}/{{slug}}"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{slug}}"
     sortable_fields: ["title", "date"]
     fields:
       - { label: "Заголовок", name: "title", widget: "string" }
       - { label: "Дата", name: "date", widget: "datetime" }
-      - {
-          label: "Черновик",
-          name: "draft",
-          widget: "boolean",
-          default: true,
-          hint: "При проверке эта публикация будет сохранена, но не будет видна на общедоступном сайте. Чтобы опубликовать пост, отмените этот флажок.",
-        }
+
       - {
           label: "Описание",
           name: "description",
