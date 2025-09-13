@@ -60,94 +60,48 @@ collections:
     create: true
     summary: "{{title | upper}} - {{date | date('YYYY-MM-DD')}} – {{body | truncate(20, '***')}}"
     filter: { field: "language", value: "uz" }
+    sortable_fields: ["title", "date"]
     fields:
-      - {
-          label: "Til",
-          name: "language",
-          widget: "select",
-          options: ["ru", "uz"],
-          default: "uz",
-        }
       - { label: "Sarlavha", name: "title", widget: "string" }
+      - { label: "Sana", name: "date", widget: "datetime" }
+      - {
+          label: "Qoralama",
+          name: "draft",
+          widget: "boolean",
+          default: true,
+          hint: "Tekshiruv paytida bu post saqlanadi, ammo ommaviy veb-saytda ko‘rinmaydi. Postni e’lon qilish uchun ushbu belgi qo‘yilgan katakchani olib tashlang.",
+        }
       - {
           label: "Tavsif",
           name: "description",
           widget: "string",
           required: false,
         }
-      - { label: "Sana", name: "date", widget: "datetime" }
-      - { label: "Qoralama", name: "draft", widget: "boolean", default: true }
-      - { label: "Teglar", name: "tags", widget: "list", required: false }
+      - { label: "Muallif", name: "author", widget: "list", required: false }
+      - { label: "Teglar", name: "tag", widget: "list", required: false }
       - {
           label: "Kategoriyalar",
-          name: "kategoriya",
-          widget: "list",
-          required: false,
-        }
-
-      - { label: "Muallif", name: "author", widget: "string", required: false }
-      - {
-          label: "Asosiy rasm",
-          name: "cover",
-          widget: "image",
-          required: false,
-        }
-      - {
-          label: "Tarkib jadvalini ko‘rsatish",
-          name: "ShowToc",
-          widget: "boolean",
-          default: false,
-          required: false,
-        }
-      - {
-          label: "Jadvalni ochiq saqlash",
-          name: "TocOpen",
-          widget: "boolean",
-          default: false,
-          required: false,
-        }
-      - { label: "Maqola matni", name: "body", widget: "markdown" }
-  - label: "Блог на русском языке"
-    name: "russian_posts"
-    folder: "content/ru/posts"
-    create: true
-    summary: "{{title | upper}} - {{date | date('YYYY-MM-DD')}} – {{body | truncate(20, '***')}}"
-    filter: { field: "language", value: "ru" }
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: true }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "string",
-          required: false,
-        }
-      - { label: "Author", name: "author", widget: "list", required: false }
-      - { label: "Tags", name: "tags", widget: "list", required: false }
-      - {
-          label: "Categories",
-          name: "categories",
+          name: "category",
           widget: "list",
           required: false,
         }
       - {
-          label: "Weight (Page Order)",
+          label: "Og‘irlik (sahifa tartibi)",
           name: "weight",
           widget: "number",
+          hint: "Ushbu sahifaning ro‘yxatdagi ko‘rsatilish tartibini boshqarish uchun raqam kiriting. Kichikroq sonlar (masalan, 10) ro‘yxatning boshida joylashadi. Katta sonlar (masalan, 100) esa ro‘yxatning oxirida ko‘rinadi.",
           required: false,
         }
 
       # Cover Image Fields
-      - label: "Cover"
+      - label: "Muqova"
         name: "cover"
         widget: "object"
         required: false
         fields:
-          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Tasvir", name: "image", widget: "image", required: false }
           - {
-              label: "Caption",
+              label: "Rasm ostidagi yozuv",
               name: "caption",
               widget: "string",
               required: false,
@@ -159,189 +113,284 @@ collections:
               required: false,
             }
           - {
-              label: "Relative Path",
+              label: "Nisbiy yo‘l (majburiy emas)",
               name: "relative",
               widget: "boolean",
               default: false,
               required: false,
+              hint: "Agar tasvirga bo‘lgan yo‘l joriy sahifaga nisbatan bo‘lishi kerak bo‘lsa, buni yoqib qo‘ying.",
             }
           - {
-              label: "Responsive Images",
+              label: "Moslashuvchan tasvirlar (ixtiyoriy)",
               name: "responsiveImages",
               widget: "boolean",
               default: false,
               required: false,
+              hint: "Veb-saytingiz turli xil ekranlar uchun rasm versiyalarini avtomatik ravishda yaratishi uchun bu funksiyani yoqing.",
             }
           - {
-              label: "Hide on Page",
+              label: "Sahifada yashirish (majburiy emas)",
               name: "hidden",
               widget: "boolean",
               default: false,
               required: false,
+              hint: "Sahifadagi muqova tasvirini yashirish uchun yoqing.",
             }
 
       # SEO & Metadata
       - {
-          label: "Robots NoIndex",
+          label: "Robots NoIndex (ixtiyoriy)",
           name: "robotsNoIndex",
           widget: "boolean",
           default: false,
           required: false,
-          hint: "Prevents search engines from indexing this page.",
+          hint: "Bu sahifaning qidiruv tizimlari tomonidan indekslanishini oldini oladi.",
         }
       - {
-          label: "Hide Meta",
+          label: "Meta-axborotni berkitish (ixtiyoriy)",
           name: "hidemeta",
           widget: "boolean",
           default: false,
           required: false,
-          hint: "Hides date, read-time, and author.",
+          hint: "Sana, o‘qilgan vaqt va muallifni yashiradi.",
         }
       - {
-          label: "Hide Summary",
+          label: "Tavsifni yig‘ishtirish (majburiy emas)",
           name: "hideSummary",
           widget: "boolean",
           default: false,
           required: false,
-          hint: "Hides summary on list pages.",
+          hint: "Ro‘yxatli sahifalarda qisqacha tavsifni yashiradi.",
         }
       - {
-          label: "Hide Footer",
+          label: "Pastki kolontitulni yashirish (majburiy emas)",
           name: "hideFooter",
           widget: "boolean",
           default: false,
           required: false,
-          hint: "Hides the footer text.",
+          hint: "Sahifa pastki qismidagi matnni yashiradi.",
         }
       - {
-          label: "Search Hidden",
+          label: "Yashirin qidiruv (majburiy emas)",
           name: "searchHidden",
           widget: "boolean",
           default: false,
           required: false,
-          hint: "Hides page from site search.",
-        }
-      - {
-          label: "Canonical URL",
-          name: "canonicalURL",
-          widget: "string",
-          required: false,
-          hint: "Adds a canonical URL to the page.",
-        }
-      - {
-          label: "Show Canonical Link",
-          name: "ShowCanonicalLink",
-          widget: "boolean",
-          default: false,
-          required: false,
-          hint: "Displays the canonical URL's hostname.",
-        }
-      - {
-          label: "Canonical Link Text",
-          name: "CanonicalLinkText",
-          widget: "string",
-          required: false,
-          default: "Originally published at",
-          hint: "Text before the canonical URL's hostname.",
+          hint: "Sahifani saytdagi qidiruv natijalaridan yashiradi.",
         }
 
       # UI & Content Display
       - {
-          label: "Show Table of Contents",
+          label: "Mundarijani ko‘rsatish (majburiy emas)",
           name: "toc",
           widget: "boolean",
           default: false,
           required: false,
         }
+
       - {
-          label: "Keep ToC Open",
-          name: "tocopen",
-          widget: "boolean",
-          default: false,
-          required: false,
-        }
-      - {
-          label: "Use Hugo's TOC",
-          name: "UseHugoToc",
-          widget: "boolean",
-          default: false,
-          required: false,
-          hint: "Uses Hugo's default TOC instead of custom one.",
-        }
-      - {
-          label: "Disable Anchored Headings",
-          name: "disableAnchoredHeadings",
-          widget: "boolean",
-          default: false,
-          required: false,
-        }
-      - {
-          label: "Show Reading Time",
+          label: "O‘qish vaqtini ko‘rsatish (majburiy emas)",
           name: "ShowReadingTime",
           widget: "boolean",
           default: true,
           required: false,
         }
       - {
-          label: "Show Word Count",
+          label: "So‘zlar sonini ko‘rsatish (majburiy emas)",
           name: "ShowWordCount",
           widget: "boolean",
           default: true,
           required: false,
         }
       - {
-          label: "Show BreadCrumbs",
+          label: "Navigatsiya yo‘lini ko‘rsatish (ixtiyoriy)",
           name: "ShowBreadCrumbs",
           widget: "boolean",
           default: false,
           required: false,
         }
-      - {
-          label: "Show Post Nav Links",
-          name: "ShowPostNavLinks",
-          widget: "boolean",
-          default: false,
-          required: false,
-        }
-      - {
-          label: "Show RSS Button",
-          name: "ShowRssButtonInSectionTermList",
-          widget: "boolean",
-          default: false,
-          required: false,
-          hint: "Shows RSS icon in Section, Term, and List pages.",
-        }
-      - {
-          label: "Show Code Copy Buttons",
-          name: "ShowCodeCopyButtons",
-          widget: "boolean",
-          default: false,
-          required: false,
-        }
-      - {
-          label: "Comments",
-          name: "comments",
-          widget: "boolean",
-          default: false,
-          required: false,
-          hint: "Shows/hides comments.",
-        }
 
-      # Sharing
+      # - {
+      #     label: "Comments",
+      #     name: "comments",
+      #     widget: "boolean",
+      #     default: false,
+      #     required: false,
+      #     hint: "Shows/hides comments.",
+      #   }
+
+      - { label: "Kontent", name: "body", widget: "markdown", required: true }
+
+  - label: "Блог на русском языке"
+    name: "russian_posts"
+    folder: "content/ru/posts"
+    create: true
+    summary: "{{title | upper}} - {{date | date('YYYY-MM-DD')}} – {{body | truncate(20, '***')}}"
+    filter: { field: "language", value: "ru" }
+    # slug: "{{fields.category}}/{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["title", "date"]
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
       - {
-          label: "Disable Share",
-          name: "disableShare",
+          label: "Черновик",
+          name: "draft",
           widget: "boolean",
-          default: false,
-          required: false,
-          hint: "Hides share icons.",
+          default: true,
+          hint: "При проверке эта публикация будет сохранена, но не будет видна на общедоступном сайте. Чтобы опубликовать пост, отмените этот флажок.",
         }
       - {
-          label: "Share Buttons",
-          name: "ShareButtons",
+          label: "Описание",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Автор", name: "author", widget: "list", required: false }
+      - { label: "Теги", name: "tag", widget: "list", required: false }
+      - {
+          label: "Категории",
+          name: "category",
           widget: "list",
           required: false,
-          hint: "Customize which share buttons to enable.",
+        }
+      - {
+          label: "Вес (заказ страницы)",
+          name: "weight",
+          widget: "number",
+          hint: "Введите число для управления порядком отображения этой страницы в списке. Меньшие числа (например, 10) отображаются в начале списка. Большие числа (например, 100) отображаются в конце",
+          required: false,
         }
 
-      - { label: "Content", name: "body", widget: "markdown" }
+      # Cover Image Fields
+      - label: "Обложка"
+        name: "cover"
+        widget: "object"
+        required: false
+        fields:
+          - {
+              label: "Изображение",
+              name: "image",
+              widget: "image",
+              required: false,
+            }
+          - {
+              label: "Подпись к изображению",
+              name: "caption",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Alt Text",
+              name: "alt",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Относительный путь (Необязательно)",
+              name: "relative",
+              widget: "boolean",
+              default: false,
+              required: false,
+              hint: "Включите, если путь к изображению должен быть относительным к текущей странице.",
+            }
+          - {
+              label: "Адаптивные изображения (Необязательно)",
+              name: "responsiveImages",
+              widget: "boolean",
+              default: false,
+              required: false,
+              hint: "Включите, чтобы ваш сайт автоматически генерировал версии изображения для разных экранов.",
+            }
+          - {
+              label: "Скрыть на странице (Необязательно)",
+              name: "hidden",
+              widget: "boolean",
+              default: false,
+              required: false,
+              hint: "Включите, чтобы скрыть изображение обложки на странице.",
+            }
+
+      # SEO & Metadata
+      - {
+          label: "Robots NoIndex (Необязательно)",
+          name: "robotsNoIndex",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Предотвращает индексирование этой страницы поисковыми системами.",
+        }
+      - {
+          label: "Скрыть метаданные (Необязательно)",
+          name: "hidemeta",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Скрывает дату, время чтения и автора.",
+        }
+      - {
+          label: "Свернуть описание (Необязательно)",
+          name: "hideSummary",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Скрывает краткое описание на страницах со списками.",
+        }
+      - {
+          label: "Скрыть нижний колонтитул (Необязательно)",
+          name: "hideFooter",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Скрывает текст нижнего колонтитула.",
+        }
+      - {
+          label: "Скрытый поиск (Необязательно)",
+          name: "searchHidden",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Скрывает страницу от поиска по сайту.",
+        }
+
+      # UI & Content Display
+      - {
+          label: "Показать оглавление (Необязательно)",
+          name: "toc",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+
+      - {
+          label: "Показать время на чтение (Необязательно)",
+          name: "ShowReadingTime",
+          widget: "boolean",
+          default: true,
+          required: false,
+        }
+      - {
+          label: "Показать количество слов (Необязательно)",
+          name: "ShowWordCount",
+          widget: "boolean",
+          default: true,
+          required: false,
+        }
+      - {
+          label: "Показать навигационную цепочку (Необязательно)",
+          name: "ShowBreadCrumbs",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+
+      # - {
+      #     label: "Comments",
+      #     name: "comments",
+      #     widget: "boolean",
+      #     default: false,
+      #     required: false,
+      #     hint: "Shows/hides comments.",
+      #   }
+
+      - { label: "Контент", name: "body", widget: "markdown", required: true }

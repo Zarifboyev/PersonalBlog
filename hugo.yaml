@@ -173,7 +173,7 @@ languages:
 # ---------------------------
 params:
   env: production # Enables Google Analytics, OpenGraph, Twitter Cards, Schema
-
+  copyright: © 2023 ABC Widgets, Inc.
   defaultTheme: auto
   displayFullLangName: true
 
@@ -186,6 +186,8 @@ params:
   ShowAllPagesInArchive: true
   ShowPostNavLinks: true
   ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
+  ShowWordCount: true
 
   analytics:
     google:
