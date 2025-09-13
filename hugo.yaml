@@ -64,7 +64,7 @@ languages:
 
     taxonomies:
       category: kategoriya
-      tag: tags
+      tag: teglar
       series: series
 
     menu:
@@ -95,8 +95,8 @@ languages:
         # imageTitle: "Men ishxonamda"
         subtitle: "Kulib turing, sizga yarashadi..."
         buttons:
-          - name: Arxiv
-            url: archives/
+          - name: Blog
+            url: posts/
           - name: Teglar
             url: tags/
           # - name: LinkedIn
@@ -153,8 +153,8 @@ languages:
         #imageWidth: 120 # You can set custom image size depending on your needs
         #imageHeight: 120 # You can set custom image size depending on your needs
         buttons:
-          - name: Архив
-            url: archives/
+          - name: Блог
+            url: posts/
           - name: Теги
             url: теги/
         # Depending on, you can add additional social media pages:

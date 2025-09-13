@@ -3,7 +3,7 @@ author: "Lobar Qalandarova"
 title: "Markdown Sintaksis Qo'llanmasi"
 date: "2019-03-11"
 description: "HTML elementlari uchun asosiy Markdown sintaksisi va formatlashni namoyish etuvchi namunaviy maqola."
-tags: ["markdown", "css", "html", "mavzular"]
+teglar: ["markdown", "css", "html", "mavzular"]
 kategoriya: ["mavzular", "sintaks"]
 series: ["Mavzu yo'riqnomalari"]
 aliases: ["jekyll-dan0-migratsiya-qilish"]
