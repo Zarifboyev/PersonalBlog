@@ -9,11 +9,6 @@ backend:
   branch: main
   squash_merges: true
 
-# The `media_folder` is the path where uploaded media will be saved, relative to the repository root.
-# The `public_folder` is the path that will be used in the final front matter for the image URL.
-media_folder: "static/images/uploads"
-public_folder: "/images"
-
 # Enables editorial workflow, which allows for drafts and reviews before publishing.
 publish_mode: editorial_workflow
 
@@ -30,6 +25,10 @@ media_library:
   config:
     publicKey: 28d536105b790be0d234
     max_file_size: 10000000 # 10 megabytes
+# The `media_folder` is the path where uploaded media will be saved, relative to the repository root.
+# The `public_folder` is the path that will be used in the final front matter for the image URL.
+# media_folder: "static/images/uploads"
+# public_folder: "/images"
 
 # Defines a custom slug format.
 slug:
@@ -59,7 +58,6 @@ collections:
     # slug: "{{fields.category}}/{{slug}}"
     create: true
     summary: "{{title | upper}} - {{date | date('YYYY-MM-DD')}} – {{body | truncate(20, '***')}}"
-    filter: { field: "language", value: "uz" }
     sortable_fields: ["title", "date"]
     fields:
       - { label: "Sarlavha", name: "title", widget: "string" }
@@ -78,10 +76,10 @@ collections:
           required: false,
         }
       - { label: "Muallif", name: "author", widget: "list", required: false }
-      - { label: "Teglar", name: "tag", widget: "list", required: false }
+      - { label: "Teglar", name: "teglar", widget: "list", required: false }
       - {
           label: "Kategoriyalar",
-          name: "category",
+          name: "kategoriya",
           widget: "list",
           required: false,
         }
@@ -124,7 +122,7 @@ collections:
               label: "Moslashuvchan tasvirlar (ixtiyoriy)",
               name: "responsiveImages",
               widget: "boolean",
-              default: false,
+              default: true,
               required: false,
               hint: "Veb-saytingiz turli xil ekranlar uchun rasm versiyalarini avtomatik ravishda yaratishi uchun bu funksiyani yoqing.",
             }
@@ -184,7 +182,7 @@ collections:
           label: "Mundarijani ko‘rsatish (majburiy emas)",
           name: "toc",
           widget: "boolean",
-          default: false,
+          default: true,
           required: false,
         }
 
@@ -206,7 +204,7 @@ collections:
           label: "Navigatsiya yo‘lini ko‘rsatish (ixtiyoriy)",
           name: "ShowBreadCrumbs",
           widget: "boolean",
-          default: false,
+          default: true,
           required: false,
         }
 
@@ -226,7 +224,6 @@ collections:
     folder: "content/ru/posts"
     create: true
     summary: "{{title | upper}} - {{date | date('YYYY-MM-DD')}} – {{body | truncate(20, '***')}}"
-    filter: { field: "language", value: "ru" }
     # slug: "{{fields.category}}/{{slug}}"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sortable_fields: ["title", "date"]
@@ -247,10 +244,10 @@ collections:
           required: false,
         }
       - { label: "Автор", name: "author", widget: "list", required: false }
-      - { label: "Теги", name: "tag", widget: "list", required: false }
+      - { label: "Теги", name: "теги", widget: "list", required: false }
       - {
           label: "Категории",
-          name: "category",
+          name: "категории",
           widget: "list",
           required: false,
         }
@@ -298,7 +295,7 @@ collections:
               label: "Адаптивные изображения (Необязательно)",
               name: "responsiveImages",
               widget: "boolean",
-              default: false,
+              default: true,
               required: false,
               hint: "Включите, чтобы ваш сайт автоматически генерировал версии изображения для разных экранов.",
             }
@@ -358,7 +355,7 @@ collections:
           label: "Показать оглавление (Необязательно)",
           name: "toc",
           widget: "boolean",
-          default: false,
+          default: true,
           required: false,
         }
 
@@ -380,7 +377,7 @@ collections:
           label: "Показать навигационную цепочку (Необязательно)",
           name: "ShowBreadCrumbs",
           widget: "boolean",
-          default: false,
+          default: true,
           required: false,
         }
 
