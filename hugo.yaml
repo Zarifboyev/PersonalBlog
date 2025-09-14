@@ -84,7 +84,7 @@ languages:
 
     params:
       editPost:
-        URL: "mailto://zarifboyev@duck.com?subject=Bizga xabar bering"
+        URL: "mailto:zarifboyev@duck.com?subject=Bizga xabar bering"
         Text: "Xatolik topdingizmi? Bizga xabar bering" # edit text
         appendFilePath: true # to append file path to Edit link
       profileMode:
@@ -139,7 +139,7 @@ languages:
 
     params:
       editPost:
-        URL: "mailto://zarifboyev@duck.com?subject=Сообщите нам"
+        URL: "mailto:zarifboyev@duck.com?subject=Сообщите нам"
         Text: "Нашли ошибку? Сообщите нам." # edit text
         appendFilePath: true # to append file path to Edit link
       profileMode:
