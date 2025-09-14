@@ -14,7 +14,7 @@ publish_mode: editorial_workflow
 # Easy to access url to return main site
 display_url: https://zarifboyev.space
 # Custom logo for dashboard
-logo_url: https://zarifboyev.space/images/logo.svg
+logo_url: https://zarifboyev.space/images/uploads/logo.svg
 # Keep search disabled in dashboard to optimize workflow
 search: false
 
