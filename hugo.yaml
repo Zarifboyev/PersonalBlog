@@ -91,12 +91,12 @@ languages:
         enabled: true
         title: "Zarifboyev's Blog"
 
-        imageUrl: "/images/smile.png"
+        imageUrl: "/images/uploads/smile.png"
         # imageTitle: "Men ishxonamda"
         subtitle: "Kulib turing, sizga yarashadi..."
         buttons:
           - name: Blog
-            url: posts/
+            url: posts
           - name: Teglar
             url: teglar/
           # - name: LinkedIn
@@ -146,7 +146,7 @@ languages:
         enabled: true
         title: "Блог Зарифбоева"
 
-        imageUrl: "/images/smile.png"
+        imageUrl: "/images/uploads/smile.png"
         # imageTitle: "Я на работе"
         subtitle: "Улыбайтесь, вам идет!"
 
@@ -154,7 +154,7 @@ languages:
         #imageHeight: 120 # You can set custom image size depending on your needs
         buttons:
           - name: Блог
-            url: posts/
+            url: posts
           - name: Теги
             url: теги/
         # Depending on, you can add additional social media pages:
@@ -198,11 +198,11 @@ params:
     disableFingerprinting: true
 
   cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
-    linkFullImages: true
-    responsiveImages: false
+    # hidden: true # hide everywhere but not in structured data
+    # hiddenInList: true # hide on list pages and home
+    # hiddenInSingle: true # hide on single page
+    # linkFullImages: true
+    # responsiveImages: false
 
   fuseOpts:
     isCaseSensitive: false
