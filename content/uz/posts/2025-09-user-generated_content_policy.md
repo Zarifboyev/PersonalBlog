@@ -1,11 +1,18 @@
 ---
-title: User-Generated Content Policy
+title: Foydalanuvchilar tomonidan yaratilgan kontent siyosati
 date: 2025-09-15T16:43:00.000+05:00
+description: Sayt foydalanuvchilari uchun muhim qoidalar
+author:
+  - Zarifboyev
+teglar:
+  - qoidalar
+kategoriya:
+  - foydalanish_siyosati
 cover:
   relative: false
   responsiveImages: true
   hidden: false
-robotsNoIndex: false
+robotsNoIndex: true
 hidemeta: false
 hideSummary: false
 hideFooter: false
@@ -15,47 +22,46 @@ ShowReadingTime: true
 ShowWordCount: true
 ShowBreadCrumbs: true
 ---
-# User-Generated Content Policy
+## Kirish
 
-## Introduction
+Ushbu Foydalanuvchilar tomonidan yaratilgan kontent siyosati veb-saytimizga material yuborish qoidalari va yo‘riqnomalarini belgilaydi. Siz material yuborish orqali mazkur siyosatga amal qilishga rozilik bildirasiz.
 
-This User-Generated Content Policy outlines the rules and guidelines for submitting content to our website. By submitting content, you agree to comply with this policy.
+## Foydalanuvchi tomonidan yaratilgan kontent tavsifi
 
-## Definition of User-Generated Content
+Foydalanuvchi tomonidan yaratilgan kontent (FTYK) deganda veb-saytimiz foydalanuvchilari tomonidan yuborilgan har qanday kontent, jumladan matn, rasm, video, fikr va sharhlar tushuniladi.
 
-User-generated content (UGC) refers to any content, including but not limited to text, images, videos, comments, and reviews, that is submitted by users of our website.
+## Yuborish yo'riqnomasi
 
-## Submission Guidelines
+FTYK yuborish orqali siz quyidagi shartlarni bajarishingiz lozim:
 
-When submitting UGC, you agree to adhere to the following guidelines:
+* **Asllik**: Siz yuborayotgan kontent sizga tegishli va muallifi hisoblanasiz
+* **Aloqadorlik**: Siz yuborgan kontent sayt mazmuni va maqsadiga muvofiq
+* **Javobgarlik**: Siz zararli, tahdidli, haqoratli, bezovta qiluvchi, tuhmat qiluvchi, beadab, behayo yoki boshqacha tarzda e’tirozga sabab bo‘ladigan mazmundagi kontentlarni yubormasligingiz shart.
 
-- **Originality**: You must own the rights to the content you submit or have permission from the rightful owner to use it.
-- **Relevance**: Your content should be relevant to the topic or purpose of our website.
-- **Respectfulness**: You must not submit content that is harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, or otherwise objectionable.
+## Moderatsiya
 
-## Moderation
+Biz o‘z ixtiyorimizga ko‘ra foydalanuvchilar tomonidan yaratilgan har qanday kontentni ko‘rib chiqish, tahrirlash yoki olib tashlash huquqini saqlab qolamiz. Bundan tashqari, ushbu qoidalarni buzgan foydalanuvchilarni vaqtincha to‘xtatish yoki butunlay yopish huquqiga egamiz.
 
-We reserve the right to review, edit, or remove any user-generated content at our discretion. We may also suspend or terminate the accounts of users who violate this policy.
+## Kontentdan foydalanish litsenziyasi
 
-## License to Use Content
+UGC yuborish orqali siz bizga kontentingizdan foydalanish, ko‘paytirish, o‘zgartirish, e’lon qilish va istalgan ommaviy axborot vositalarida tarqatish uchun ekskluziv bo‘lmagan, bepul, muddatsiz va butun dunyo miqyosidagi litsenziyani taqdim etasiz. Ushbu litsenziya bizga kontentingizni xizmatlarimizning bir qismi sifatida targ‘ib qilish va baham ko‘rish imkonini beradi.
 
-By submitting UGC, you grant us a non-exclusive, royalty-free, perpetual, and worldwide license to use, reproduce, modify, publish, and distribute your content in any media. This license allows us to promote and share your content as part of our services.
+## Kompensatsiya yo‘q
 
-## No Compensation
+Siz yuborgan kontentingiz uchun hech qanday kompensatsiya olmasligingizni tasdiqlaysiz va kontentingizdan foydalanish bilan bog‘liq har qanday mualliflik haqi yoki boshqa kompensatsiya huquqlaridan voz kechasiz.
 
-You acknowledge that you will not receive any compensation for your submitted content, and you waive any rights to royalties or other compensation related to the use of your content.
+## Qoidabuzarliklar haqida xabar berish
 
-## Reporting Violations
+Agar har qanday foydalanuvchi tomonidan yaratilgan kontent ushbu siyosat yoki huquqlaringizni buzadi, deb hisoblasangiz, darhol bizga murojaat qiling. O‘rganamiz va tegishli choralar ko‘ramiz.
 
-If you believe that any user-generated content violates this policy or your rights, please contact us immediately. We will investigate and take appropriate action.
+## Bu siyosatga kiritilgan o‘zgarishlar
 
-## Changes to This Policy
+Biz ushbu Foydalanuvchi tomonidan yaratilgan kontent siyosatini vaqti-vaqti bilan yangilab turishimiz mumkin. Har qanday o‘zgarishlar haqida ushbu sahifada yangi siyosatni joylashtirish orqali sizni xabardor qilamiz. O‘zgarishlardan keyin xizmatlarimizdan foydalanishda davom etishingiz yangi siyosatni qabul qilganingizni bildiradi.
 
-We may update this User-Generated Content Policy from time to time. We will notify you of any changes by posting the new policy on this page. Your continued use of our services after any changes constitutes your acceptance of the new policy.
+## Bizga murojaat qiling
 
-## Contact Us
+Agar ushbu Foydalanuvchi tomonidan yaratilgan kontentga oid siyosat yuzasidan savollaringiz bo‘lsa, bizga murojaat qiling:
 
-If you have any questions about this User-Generated Content Policy, please contact us:
+Email: \[your-email@example.com]
 
-- Email: [your-email@example.com]
-- Phone: [your-phone-number]
+Telefon: \[your-phone-number]
