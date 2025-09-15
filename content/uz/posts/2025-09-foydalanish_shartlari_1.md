@@ -15,44 +15,42 @@ ShowReadingTime: true
 ShowWordCount: true
 ShowBreadCrumbs: true
 ---
-# Usage Policy
+## Kirish
 
-## Introduction
+Ushbu Foydalanish siyosatida veb-sayt va xizmatlarimizdan foydalanish qoidalari va ko‘rsatmalari keltirilgan. Xizmatlarimizga kirish yoki ulardan foydalanish orqali siz ushbu siyosatga rioya qilishga rozilik berasiz.
 
-This Usage Policy outlines the rules and guidelines for using our website and services. By accessing or using our services, you agree to comply with this policy.
+## Maqbul foydalanish
 
-## Acceptable Use
+Siz bizning xizmatlarimizdan faqat qonuniy maqsadlarda va boshqa shaxslarning huquqlarini buzmaydigan yoki ularning ushbu xizmatlardan foydalanishi va foydalanishini cheklamaydigan tarzda foydalanishga rozilik berasiz. Taqiqlangan faoliyatga quyidagilar kiradi, lekin ular bilan cheklanmaydi:
 
-You agree to use our services only for lawful purposes and in a manner that does not infringe the rights of others or restrict their use and enjoyment of the services. Prohibited activities include, but are not limited to:
+* Har qanday noqonuniy faoliyat bilan shug‘ullanish.
+* Zararli, tahdidli, haqoratli, shilqimlik qiluvchi, obro‘sizlantiruvchi, qo‘pol, odobsiz yoki boshqa nomaqbul materiallarni yuborish.
+* Tizim yoki tarmoqlarimizga ruxsatsiz kirishga urinish.
+* Xizmatlarimiz yoki serverlarimizning kutilganidek ishlashiga xalaqit berish.
 
-- Engaging in any unlawful activity.
-- Transmitting any material that is harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, or otherwise objectionable.
-- Attempting to gain unauthorized access to our systems or networks.
-- Interfering with the proper functioning of our services or servers.
+## Foydalanuvchi hisoblari
 
-## User Accounts
+Agar veb-saytimizda hisob yaratgan bo‘lsangiz, hisob ma’lumotlaringiz, jumladan, parolingiz maxfiyligini ta’minlash uchun javobgar hisoblanasiz. Siz hisobingizdan har qanday ruxsatsiz foydalanish yoki boshqa xavfsizlik buzilishi haqida bizga darhol xabar berishga rozilik bildirasiz.
 
-If you create an account on our website, you are responsible for maintaining the confidentiality of your account information, including your password. You agree to notify us immediately of any unauthorized use of your account or any other breach of security.
+## Kontent yuborish
 
-## Content Submission
+Veb-saytimizga kontent yuborish orqali, siz bizga ushbu kontentdan foydalanish, ko‘paytirish, o‘zgartirish, e’lon qilish va tarqatish uchun mutlaq bo‘lmagan, bepul, doimiy va butun dunyo miqyosidagi huquqni taqdim etasiz. Siz yuborayotgan kontentga egalik qilishingizni yoki unga nisbatan zarur huquqlarga ega ekanligingizni tasdiqlaysiz va kafolat berasiz.
 
-By submitting content to our website, you grant us a non-exclusive, royalty-free, perpetual, and worldwide license to use, reproduce, modify, publish, and distribute such content. You represent and warrant that you own or have the necessary rights to the content you submit.
+## Aqliy mulk
 
-## Intellectual Property
+Veb-saytimizdagi barcha kontent, savdo belgilari va boshqa intellektual mulk ularning tegishli egalarining mulki hisoblanadi. Siz egasining oldindan yozma ruxsatisiz hech qanday kontentdan foydalana olmaysiz, uni ko‘paytira olmaysiz yoki tarqata olmaysiz.
 
-All content, trademarks, and other intellectual property on our website are the property of their respective owners. You may not use, reproduce, or distribute any content without prior written permission from the owner.
+## Tugatish
 
-## Termination
+Biz ushbu Foydalanish siyosatini buzadigan yoki boshqa foydalanuvchilar yoki xizmatlarimizga zarar yetkazadigan xatti-harakatlar uchun xizmatlarimizga kirishingizni istalgan payt ogohlantirishsiz to‘xtatib qo‘yish yoki tugatish huquqini o‘zimizda saqlab qolamiz.
 
-We reserve the right to suspend or terminate your access to our services at any time, without notice, for conduct that we believe violates this Usage Policy or is harmful to other users or our services.
+## Bu siyosatga kiritilgan o‘zgarishlar
 
-## Changes to This Policy
+Biz ushbu Foydalanish siyosatini vaqti-vaqti bilan yangilab turishimiz mumkin. Har qanday o‘zgarishlar haqida ushbu sahifada yangi siyosatni joylashtirish orqali sizni xabardor qilamiz. O‘zgarishlardan keyin xizmatlarimizdan foydalanishda davom etishingiz yangi siyosatni qabul qilganingizni bildiradi.
 
-We may update this Usage Policy from time to time. We will notify you of any changes by posting the new policy on this page. Your continued use of our services after any changes constitutes your acceptance of the new policy.
+## Bizga murojaat qiling
 
-## Contact Us
+Agar ushbu Foydalanish siyosati yuzasidan savollaringiz bo‘lsa, bizga murojaat qiling:
 
-If you have any questions about this Usage Policy, please contact us:
-
-- Email: [your-email@example.com]
-- Phone: [your-phone-number]
+* Email: \[your-email@example.com]
+* Phone: \[your-phone-number]
