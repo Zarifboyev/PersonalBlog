@@ -1,5 +1,5 @@
 ---
-title: Foydalanish shartlari
+title: Maxfiylik shartlari
 date: 2025-09-15T16:40:00.000+05:00
 cover:
   relative: false
