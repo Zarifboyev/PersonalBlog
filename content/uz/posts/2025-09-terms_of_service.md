@@ -44,7 +44,7 @@ Siz quyidagi taqiqlangan harakatlarning hech biri bilan shug‘ullanmaslikka roz
 
 ## Intellektual mulk
 
-All content, trademarks, and other intellectual property on our website are the property of their respective owners. You may not use, reproduce, or distribute any content without prior written permission from the owner.
+Veb-saytimizdagi barcha mazmun, tovar belgilari va boshqa intellektual mulk tegishli egalarining mulki hisoblanadi. Siz egalari tomonidan oldindan berilgan yozma ruxsatnomasiz hech qanday mazmundan foydalanishingiz, uni ko‘paytirishingiz yoki tarqatishingiz mumkin emas.
 
 ## Tugatish
 
