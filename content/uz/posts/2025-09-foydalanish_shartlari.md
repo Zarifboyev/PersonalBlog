@@ -15,60 +15,57 @@ ShowReadingTime: true
 ShowWordCount: true
 ShowBreadCrumbs: true
 ---
-# Privacy Policy
+## Kirish
 
-## Introduction
+Maxfiyligingiz biz uchun muhim. Bu Maxfiylik siyosati veb-saytimizga tashrif buyurganingizda ma’lumotlaringizni qanday olishimiz, foydalanishimiz, oshkor qilishimiz va himoyalashimizni tavsiflaydi.
 
-Your privacy is important to us. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website.
+## Biz to‘playdigan axborotlar
 
-## Information We Collect
+Biz quyidagi turdagi axborotlarni olishimiz mumkin:
 
-We may collect the following types of information:
+* **Shaxsiy ma’lumotlar: Ism, email manzili, telefon raqami va siz taqdim etgan boshqa aniqlanadigan ma’lumotlar.**
+* **Foydalanish statistikasi: veb-saytimizdan qanday foydalanishingiz, jumladan, IP manzilingiz, brauzer turi va kirish vaqtlari haqidagi ma’lumotlar.**
+* **Cookie-fayllar: Qurilmangizda saqlanadigan kichik ma’lumotlar fayllari, ular bizga taassurotingizni yaxshilashga yordam beradi.**
 
-- **Personal Information**: Name, email address, phone number, and other identifiable information you provide.
-- **Usage Data**: Information about how you use our website, including your IP address, browser type, and access times.
-- **Cookies**: Small data files stored on your device that help us improve your experience.
+## Axborotlaringizdan qanday foydalanamiz
 
-## How We Use Your Information
+Biz to‘plagan ma’lumotlardan quyidagi maqsadlarda foydalanishimiz mumkin:
+*Veb-saytimizni taqdim etish va uni ishchi holatda saqlash uchun*
+Xizmatlarimizda bo‘ladigan o‘zgarishlar haqida sizni xabardor qilish uchun
+*Sizga interaktiv imkoniyatlardan foydalanish imkonini berish uchun*
+Mijozlarga yordam ko‘rsatish uchun
+*Veb-saytimizni takomillashtirish maqsadida tahlil va qimmatli ma’lumotlar to‘plash uchun*
+Veb-saytimizdan foydalanish darajasini kuzatib borish uchun
+*Texnik muammolarni aniqlash, oldini olish va bartaraf etish uchun
 
-We may use the information we collect for various purposes, including:
+## Axborotlaringizning oshkor etilishi
 
-- To provide and maintain our website
-- To notify you about changes to our services
-- To allow you to participate in interactive features
-- To provide customer support
-- To gather analysis or valuable information so we can improve our website
-- To monitor the usage of our website
-- To detect, prevent, and address technical issues
+Biz ma’lumotlaringizni quyidagi holatlarda ulashishimiz mumkin:
 
-## Disclosure of Your Information
+* **Xizmat provayderlari bilan: Xizmatlarimizni osonlashtirish uchun ma’lumotlaringizni tashqi provayderlarga ulashishimiz mumkin.**
+* **Qonuniy sabablar uchun: Agar qonun talab qilsa yoki davlat organlarining asosli so‘rovlariga javoban ma’lumotlaringizni oshkor qilishimiz mumkin.**
 
-We may share your information in the following situations:
+## Axborotlaringiz xavfsizligi
 
-- **With Service Providers**: We may share your information with third-party vendors to facilitate our services.
-- **For Legal Reasons**: We may disclose your information if required to do so by law or in response to valid requests by public authorities.
+Ma’lumotlaringiz xavfsizligi biz uchun muhim, lekin hech qanday internet orqali uzatish usuli yoki elektron saqlash usuli 100 foiz xavfsiz emasligini unutmang. Biz ma’lumotlaringizni himoyalash uchun tijoriy jihatdan maqbul vositalardan foydalanishga harakat qilsak-da, ularning mutlaq xavfsizligini kafolatlay olmaymiz.
 
-## Security of Your Information
+## Ma’lumotlarni himoyalash huquqlaringiz
 
-The security of your information is important to us, but remember that no method of transmission over the internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee its absolute security.
+Joylashuvingizga qarab, quyidagi ma’lumotlarni himoyalash huquqlariga ega bo‘lishingiz mumkin:
 
-## Your Data Protection Rights
+* Siz haqingizdagi ma’lumotlarga kirish, yangilash yoki o‘chirish huquqi.
+* Rektifikatsiya huquqi.
+* E’tiroz bildirish huquqi.
+* Ma’lumotlarni ko‘chirish huquqi.
+* Rozilikni qaytarib olish huquqi.
 
-Depending on your location, you may have the following data protection rights:
+## Bu Maxfiylik siyosatiga kiritilgan o‘zgarishlar
 
-- The right to access, update, or delete the information we have on you.
-- The right to rectification.
-- The right to object.
-- The right to data portability.
-- The right to withdraw consent.
+Biz Maxfiylik siyosatimizni vaqti-vaqti bilan yangilab turishimiz mumkin. Har qanday o‘zgarishlar haqida ushbu sahifada yangi Maxfiylik siyosatini joylashtirish orqali sizni xabardor qilamiz.
 
-## Changes to This Privacy Policy
+## Bizga murojaat qiling
 
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
+Agar ushbu Maxfiylik siyosati yuzasidan savollaringiz bo‘lsa, bizga murojaat qiling:
 
-## Contact Us
-
-If you have any questions about this Privacy Policy, please contact us:
-
-- Email: [your-email@example.com]
-- Phone: [your-phone-number]
+* Email: \[your-email@example.com]
+* Phone: \[your-phone-number]
