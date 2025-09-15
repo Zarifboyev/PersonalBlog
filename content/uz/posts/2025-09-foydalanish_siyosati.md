@@ -44,3 +44,7 @@ Foydalanuvchining majburiyatlari:
 \- Zararli, tahdidli, haqoratli, shilqimlik qiluvchi, obro‘sizlantiruvchi, qo‘pol, odobsiz yoki boshqa nomaqbul materiallarni yubormaslik
 
 Foydalanuvchi veb-sayt yaratish orqali o'zining 18 yoshga to'lgan ya'ni voyaga yetgan O'zbekiston fuqarosi ekanligiga kafolat beradi.
+
+Tomonlarning javobgarligi:
+
+Provayder veb-saytning uzluksiz faoliyat yuritishiga kafolat beradi va texnik masalalar bilan shug'ullanadi. Mijoz o'ziga yaratilgan saytda tarqatiladigan barcha axborotga, mualliflik huquqi masalalariga shaxsan javobgar hisoblanadi.
