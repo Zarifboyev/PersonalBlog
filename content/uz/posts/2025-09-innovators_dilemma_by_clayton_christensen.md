@@ -33,8 +33,7 @@ Innovator's Dilemma - bu har bir biznes menejment sohasida faoliyat yuritadigan 
 
 Kitobda "Kirish" qismidan boshlab, muallif innovatsiyalarni 2 turga bo'ladi:
 
-1. Sustaining Innovations - yurib turgan hozirda ishlatilayotgan texnologiya
+1. Sustaining Innovations - yurib turgan hozirda ishlatilayotgan texnologiya. Buni o'zbekcha doimiy texnologiyalar deb atashimiz mumkin
+2. Disruptive Innovations - yangi, hali sinovdan o'tmagan, arzon va yangi texnologiya. Buni o'zbekcha muqobil texnologiyalar deb atashimiz mumkin.
 
-2. Disruptive Innovations - yangi, hali sinovdan o'tmagan, arzon va yangi texnologiya.
-
-Hozirda bozorni egallagan kompaniyalar "sustaining technology" asosida ishlashi, ularning o'z prinsiplariga, marketing sxemasi va bozor strategiyasi mavjudligi haqida bayon etiladi. Ushbu kompaniyalar katta kompaniyalar hisoblanib, ular o'z daromadini oshirish uchun har safar "sustaining technology" ga investitsiya kiritishadi va o'zlarining premium ko'p pul to'laydigan mijozlari uchun texnologiyalarni taqdim etadilar. Sodda tushuningiz uchun, Apple iPhone telefonlarini har yili yangi modellarini chiqaradi, yangi funksiyalari va yanada tezroq ishlaydigan chip bilan. Bu esa kompaniya bir xil startegiya orqali har yili o'sib borishini anglatadi.
+Hozirda bozorni egallagan kompaniyalar doimiy texnologiyalar asosida ishlashi, ularning o'z prinsiplariga, marketing sxemasi va bozor strategiyasi mavjudligi haqida bayon etiladi. Ushbu kompaniyalar katta kompaniyalar hisoblanib, ular o'z daromadini oshirish uchun har safar "sustaining technology" ga investitsiya kiritishadi va o'zlarining premium ko'p pul to'laydigan mijozlari uchun texnologiyalarni taqdim etadilar. Sodda tushuningiz uchun, Apple iPhone telefonlarini har yili yangi modellarini chiqaradi, yangi funksiyalari va yanada tezroq ishlaydigan chip bilan. Bu esa kompaniya bir xil startegiya orqali har yili o'sib borishini anglatadi.
