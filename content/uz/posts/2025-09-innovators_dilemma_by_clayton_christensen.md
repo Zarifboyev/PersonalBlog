@@ -46,6 +46,8 @@ Ushbu kitob dunyoning mashhur insonlari tomonidan o'qilgan va tavsiya etilgan, j
 
 Kitob, ushbu kompaniyalar asoschilariga juda katta muhim ko'nikmalarni o'rgatgan. Ushbu kitob muallif Clayton M. Christensen'ning 50 yillik tadqiqot ishlari natijasi hisoblanadi. Harvard Business Schoolga kirmagan bo'lsangiz ham, ushbu kitob ushbu biznes maktabining asosiy kitoblari jamlangan kutubxonasidan joy olgan, bu kitobni o'qish orqali biznesda qimmatli bo'lgan ko'nikma va tajribalarga ega bo'lasiz.
 
+Muallif, o'z tadqiqotini asosan qattiq disk ishlab chiqaruvchi kompaniyalar tarixi, sotuvi va shu kabi ma'lumotlar asosida shakllantirgan...
+
 Kitob ingliz tilida nashr etilgan bo'lib, hali o'zbek tiliga tarjima qilinmagan. Kitobni World Of Books sayti orqali o'qilganini 10$ ga sotib oldim va o'ylaymanki kitob bu pulga 100% arziydi va xuddi shu kitobni do'stlarimga ham tavsiya qilaman. 
 
 Kitobga qiziqdingizmi? Ingliz tili ko'nikmalaringiz yaxshimi? Unda albatta buyurtma bering, zarifboyev@duck.com ga email pochta yozing va men sizga ushbu kitobni yetkazib beraman.
