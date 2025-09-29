@@ -14,7 +14,7 @@ cover:
   relative: false
   responsiveImages: true
   hidden: false
-  image: https://2kra8ker43.ucarecd.net/08a12a7f-98d2-442e-9416-278d966111b7/
+  image: ""
 robotsNoIndex: false
 hidemeta: false
 hideSummary: false
