@@ -11,13 +11,13 @@ teglar:
   - Innovatsiya
   - ""
 kategoriya:
-  - Kitoblar
+  - Kitoblarim
 cover:
   relative: false
   responsiveImages: true
   hidden: false
   image: https://2kra8ker43.ucarecd.net/9e0b21e3-20dc-4175-a987-16baa15762ba/
-  caption: Muallif va Kitob
+  caption: Muallif surati va uning kitobi
   alt: Kitob rasmi
 robotsNoIndex: false
 hidemeta: false
