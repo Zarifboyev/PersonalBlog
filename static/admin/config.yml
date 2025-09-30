@@ -41,9 +41,9 @@ i18n:
   default_locale: "ru"
 # Defines a custom slug format.
 slug:
-  encoding: "ascii"
-  clean_accents: true
-  sanitize_replacement: "_"
+  transliterate: true # Add this line to convert 'Р' to 'R', 'у' to 'u', etc.
+  clean_accents: true # Keep for consistency with other languages
+  sanitize_replacement: "-" # Use a hyphen for better URL readability
 
   # These are the fields that will appear in the editor for each post.
   # This section defines the content collections for your site.
