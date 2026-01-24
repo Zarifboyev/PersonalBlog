@@ -1,7 +1,7 @@
 # ---------------------------
 # General Site Configuration
 # ---------------------------
-baseURL: "https://zarifboyev.space/"
+baseURL: "https://shaxsiyblogim.netlify.app/"
 theme: "PaperMod"
 languageCode: "uz-UZ"
 defaultContentLanguage: uz
@@ -10,7 +10,6 @@ disableDefaultLanguageRedirect: false
 disableLanguages: []
 
 title: "Zarifboyev's Space"
-# description: "Shaxsiy blog. @Zarifboyev tomonidan yaratilgan. O'z ijodingizni kashf eting"
 
 # ---------------------------
 # Build & Output Settings
@@ -104,13 +103,13 @@ languages:
 
       socialIcons: # optional
         - name: "twitter"
-          url: "x.com"
+          url: "https://x.com/"
         - name: "stackoverflow"
-          url: "stackoverflow.com"
+          url: "https://stackoverflow.com/"
         - name: "linkedin"
-          url: "linkedin.com"
+          url: "https://linkedin.com/"
         - name: "github"
-          url: "github.com"
+          url: "https://github.com/"
   ru:
     title: Zarifboyev's Space
     languageName: "По-русски 🇷🇺"
@@ -161,13 +160,13 @@ languages:
 
       socialIcons: # optional
         - name: "twitter"
-          url: "x.com"
+          url: "https://x.com/"
         - name: "stackoverflow"
-          url: "stackoverflow.com"
+          url: "https://stackoverflow.com/"
         - name: "linkedin"
-          url: "linkedin.com"
+          url: "https://linkedin.com/"
         - name: "github"
-          url: "github.com"
+          url: "https://github.com/"
 # ---------------------------
 # Theme Parameters
 # ---------------------------

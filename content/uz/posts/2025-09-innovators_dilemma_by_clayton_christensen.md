@@ -65,6 +65,5 @@ Muallif turli xil sohalar jumladan qattiq disk ishlab chiqarish, geologiya va ye
 
 Kitob ingliz tilida nashr etilgan bo'lib hali o'zbek tiliga tarjima qilinmagan. Men kitobni World Of Books sayti orqali o'qilganini tahminan 20 tacha somsa puliga sotib oldim va o'ylaymanki kitob bu narxiga 100% arziydi. 
 
-Kitobga qiziqdingizmi? Ingliz tili ko'nikmalaringiz yaxshimi? Unda albatta buyurtma bering zarifboyev@duck.com ga email pochta yozing va men sizga ushbu kitobni yetkazib beraman. 
 
 Ushbu kitob sizga biznesda muvaffaqiyat qozonish uchun zarur bo'lgan ko'nikmalarni o'rganishga yordam beradi va innovatsion yechimlar yaratishda ilhomlantiradi.

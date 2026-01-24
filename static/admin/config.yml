@@ -12,9 +12,9 @@ backend:
 publish_mode: simple
 
 # Easy to access url to return main site
-display_url: https://zarifboyev.space
+display_url: https://shaxsiyblogim.netlify.app/
 # Custom logo for dashboard
-logo_url: https://zarifboyev.space/images/uploads/logo.svg
+logo_url: https://shaxsiyblogim.netlify.app/images/uploads/logo.svg
 # Keep search disabled in dashboard to optimize workflow
 search: false
 
