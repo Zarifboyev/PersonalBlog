@@ -9,7 +9,7 @@ backend:
   squash_merges: true
 
 # Enables editorial workflow, which allows for drafts and reviews before publishing.
-publish_mode: editorial_workflow
+publish_mode: simple
 
 # Easy to access url to return main site
 display_url: https://zarifboyev.space
