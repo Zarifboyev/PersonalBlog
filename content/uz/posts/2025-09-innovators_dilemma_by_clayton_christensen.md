@@ -3,7 +3,7 @@ title: Innovator's Dilemma by Clayton Christensen
 date: 2025-09-29T16:24:00.000+05:00
 description: Innovator's Dilemme kitobiga kitobxon tomonidan sharh.
 author:
-  - Zarifboyev
+  - Javier
 teglar:
   - Biznes
   - Menejment
